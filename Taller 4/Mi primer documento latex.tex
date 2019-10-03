@@ -1,0 +1,172 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=4cm,right=3cm,top=4cm,bottom=3cm]{geometry}
+\newtheorem{thm}{Teorema}
+\newtheorem{lem}{Lema}
+\newtheorem{defn}{Definición} %{defn}{thm} se utiliza para enumerar tambien el teorema sin escribir el {thm} solo sale el numero de definicion
+\date{Junio 04 de 2016}
+\author{Valentina Cordova , Emil Vega}
+\title{Mi primer documento Latex}
+\begin{document}
+\maketitle
+Cuando el profesor de Álgebra llega al capítulo de autovectores, es probable que muchos piensen algo como el título de esta entrada. Honestamente, que el sufrido profesor le suelte a uno que, dada una matriz cuadrada A, queremos encontrar todos aquellos valores $\lambda$ y vectores $v$ que cumplen:
+$A v = \lambda v$
+o equivalentemente
+\[
+(A - \lambda I)v = 0
+\]
+Sin embargo, hay pocas herramientas tan extremadamente útiles como el cálculo de autovalores (los $\lambda$) y autovectores (los v) de una matriz. Me atrevería a decir que hay pocas ramas científicas y técnicas en las que el análisis de autovalores no tenga una aplicación en un tema fundamental, directa o indirectamente.Para hacernos una idea, olvidémonos de las fórmulas de arriba. En cambio, veamos con ejemplos qué ocurre dependiendo de qué signifique la matriz A.
+Imaginemos un cuerpo sólido, de casi cualquier tipo. Pues bien, si partimos el sólido en una serie finita de "trozos", podemos modelar cuánta masa tiene cada uno y cómo de "fuertemente unido" está a sus "trozos" vecinos. Haciendo esto sistemáticamente podemos formar con los primeros números una matriz de masas M y con los segundos una matriz de rigidez $K$. Usando un principio de elasticidad básico, podemos plantear la segunda Ley de Newton (aquello de $F=ma$) para todas las partes del sólido (con coordenadas $x$) y nos daría:  
+Y ahora viene lo curioso: esta forma tan sencilla nos permite predecir con gran precisión cómo vibrará, y a qué frecuencias, cualquier objeto sólido. Operando, y llamando $\omega$ a las frecuencias, tenemos:
+\begin{equation}
+{ M }^{ -1 }Kx\quad =\quad { \omega }^{ 2 }
+\end{equation}
+\[
+{ M }^{ -1 }Kx\quad =\quad { \omega }^{ 2 }
+\]
+$$
+\begin{bmatrix}
+A & { B }^{ T } \\ B & 0 
+\end{bmatrix}
+$$
+Que no es más que un problema de autovalores, donde las $\lambda$ del principio (autovalores) ahora son el cuadrado de las frecuencias (angulares) de resonancia del cuerpo y la matriz A es  . Pero eso no es todo: los autovectores x además nos indican, para cada modo de vibración (para cada autovalor), de qué forma exacta se va a mover el cuerpo.
+
+\section{Ejemplos}
+Mejor verlo con ejemplos. El primero, muy sencillo, corresponde al primer modo de vibración (al de frecuencia más baja, y por tanto, más fácil de excitar) de una viga metálica empotrada en una pared y con un extremo libre:
+\subsection{Frecuencia de una Viga}
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=3cm, height=4cm]{viga.png}
+\caption{Imagen viga}
+\end{figure}
+
+
+
+\section{Tablas}
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+País & Ciudad \\
+\hline \hline
+España & Madrid \\ \hline
+Ecuador & Sevilla \\ \hline
+Francia & París \\ \hline
+\end{tabular}
+\caption{Tabla muy sencilla.}
+\label{tabla:sencilla}
+\end{center}
+\end{table}
+\section{Ecuaciones Lineales}
+$$
+\begin{bmatrix} A & { B }^{ T } \\ B & 0 
+\end{bmatrix} \left[ \begin{matrix} \lambda  \\ x \end{matrix} 
+\right]
+$$
+
+\section{Interpolacion Polinomial}
+Este es mi primer documento en \LaTeX. Comenzamos escribiendo un pequeño  párrafo que presenta una clase muy importante de sistemas lineales:
+
+``La solución numérica de sistemas lineales de punto de ensilladura constituye un tópico muy importante en la formulación y desarrollo de una gran cantidad de problemas de las ciencias computacionales y la ingeniería. Las dimensiones de este tipo de sistemas así como su patrón de dispersión son variados y dependen del tipo de aplicación involucrada, pero en general poseen una estructura en bloques de la forma:
+
+\begin{equation}
+\underbrace{
+\begin{bmatrix}
+A & B \\ 
+A^{T} & O
+\end{bmatrix}
+}_{\mathcal{A}}
+\underbrace{
+\begin{bmatrix}
+x\\
+\lambda
+\end{bmatrix}
+}_{u}
+=
+\underbrace{
+\begin{bmatrix}
+f\\
+g
+\end{bmatrix}
+}_{b}
+\end{equation}
+
+
+
+
+donde $A \in \mathbb{R}^{n\times n}, B  \in \mathbb{R}^{m\times n}, O \in \mathbb{R}^{m\times m} $ es una matriz nula, $f\in \mathbb{R}^{n}$ , 
+$g\in \mathbb{R}^{m}$ y $n \geq m".$
+
+Para practicar la escritura de normas, raíces cuadradas, limites y series, considere el siguiente fragmento de texto en donde se define la exponencial de un operador lineal $T : \mathbb{R}^{^{n}} \rightarrow \mathbb{R}^{n}$
+
+Para definir la exponencial de un operador lineal $T : \mathbb{R}^{n} \rightarrow \mathbb{R}^{n}$ es necesario establecer el concepto de convergencia  en el espacio lineal  $\mathcal{L}(\mathbb{R}^{^{n}})$ de los operadores lineales sobre $\mathbb{R}^{n}$. Para ello, se define el $operador$ $norma$ $de$ $T$ como:
+
+\begin{equation}
+\left \| T \right \| = \max_{\left | x \right |\leq 1}\left | T(x) \right |,
+\end{equation}
+donde $\left| x \right |$ denota la forma Euclidea de $x :=(x_1,x_2,...,x_n) \in \mathbb{R}^{n},$ esto es, 
+\begin{equation}
+\left| x \right | = \sqrt{x_1 + x_2 + ...+ x_n.}
+\end{equation}
+
+La norma de operadores posee las propiedades usuales de una norma, por lo tanto, si $S, T \in \mathcal{L}(\mathbb{R}^{n}):$
+\begin{itemize}
+\item $\left \| T \right \|\geq 0 $ y $\left \| T \right \|=0$ si y solo si $T=0$
+\item $\left \| T \right \| = \left | k \right |\left \| T \right \|$ para todo $k \in \mathbb{R}.$
+\item$\left \| S + T\right\|\leq \left \|S\right\| + \left \| T\right\|.$
+\end{itemize}
+\begin{defn}
+$ Una$  $sucesi\acute{o}n$ $de$ $operadores$ $lineales$ $T_k \in \mathcal{L}(\mathbb{R}^{n})$ $converge$ $a$ $un$ $operador$ $lineal$  $T \in \mathcal{L}(\mathbb{R}^{n})$  $cuando$ $k\rightarrow\infty$ $si:$ 
+\begin{equation}
+ \lim_{k\rightarrow\infty} T_k = T
+\end{equation}
+$ esto$ $es$, $para$ $todo$ $\varepsilon > 0$ $existe$ $N \in \mathbb{N}$ $ tal$ $que$ $si$ $k \geq N$ $entonces$ $\left \|T - T_k\right\| < \varepsilon$.
+\end{defn}
+\begin{lem}
+$ Para$ $S,$ $T \in \mathcal{L}(\mathbb{R}^{n})$ $y$ $ x \in \mathbb{R}^{n} ,$
+\begin{itemize}
+\item $\left \|T(x) \right \|\leq \left \|T \right\| \left \|x\right\|$.
+\item $\left\|TS \right \|\leq \left\|T\right\| \left\| S\right\|$.
+\item $\left\| T^{k} \right\|\leq \left\|T\right\|^{k}$ $para$ $k$ $= 0,1,2,...$
+\end{itemize}
+\end{lem}
+\begin{thm}
+Dado $T \in \mathcal{L}(\mathbb{R}^{n})$ y $t_0 > 0.$ la serie
+\begin{equation}
+\sum_{k=0}^{\infty}\frac{T^{k}t^{k}}{k!},
+\end{equation}
+es absolutamente y uniformemente convergente para todo $\left |t\right| \leq t_0.$
+\end{thm}
+
+
+En virtud del teorema 1 se define la exponencial de un operador $T$ mediante la serie absolutamente convergente:
+\begin{equation}
+e^{^{T}} := \sum_{k=0}^{\infty}\frac{T^{k}}{k!} . 
+\end{equation}
+
+ Para practicar la escritura de derivadas, presentamos la ecuación de Euler y la metodología para transformarla en una ecuación de segundo orden con coeficientes constantes, así como un sistema de ecuaciones diferenciales. 
+La ecuación de Euler $x^{2}y^{\prime\prime} + \alpha x y^{\prime} + \beta y = 0$ se puede reducir a una ecuación con coeficientes constantes mediante un cambio de la variable independiente.
+Sea $x = e^{z}$ o $z= ln(x)$, y considere solo el intervalo $ x>0$, entonces:
+\begin{equation}
+\frac{dy}{dx} = \frac{1}{x} \frac{dy}{dz}
+\end{equation}
+\begin{equation}
+\frac{d^{2}y}{dx^{2}} = \frac{1}{x^{2}} \frac{d^{2}y}{dz^{2}} - \frac{1}{x^{2}} \frac{dy}{dz}
+\end{equation}
+y en consecuencia la ecuacion de Euler se convierte en la siguiente:
+\begin{equation}
+\frac{d^{2}y}{dz^{2}} + (\alpha - 1) \frac{dy}{dz} + \beta y = 0
+\end{equation}
+Un ejemplo de un sistema de ecuaciones diferenciales no homogeneo es el siguiente:
+\begin{equation}
+\begin{aligned}
+\dot{x} &= -2x + y + 2 e^{-t} \\ \dot{y} &= x - 2y + 3t,
+\end{aligned}
+\end{equation} 
+\end{document}

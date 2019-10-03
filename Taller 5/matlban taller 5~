@@ -1,0 +1,26 @@
+en lugar de plot (x,y)
+semilogy(x,y)
+
+ejercicio 1
+el programa que nos do la profesora evalua un numero en el polinomio, lo que debemos hacer es evaluar un intervalo en el polinomio.
+
+ejercicio 2
+los x nodos se los saca con la formula que está ahí
+los y nodos es la evaluaciń de los xnodos en f(x)
+z son los puntos equidistantes en el intervalo [-1,1]
+
+
+para el jercicio 3
+
+parte b
+los errores se sacan como la parte a del ejercicio 2
+
+la parte c
+plot (nn, error)
+nn = [10 20 40 80]
+x=[-1:0.001:1]
+P10(x)=Y10
+y=f(x)
+e10 = norm((y-y10),'inf')
+error = [e10,e20,e40,e80]
+
